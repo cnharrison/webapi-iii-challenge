@@ -1,13 +1,13 @@
 const express = require("express");
 const moment = require("moment");
 
-const PostsRouter = require("./posts/postsRouter.js");
+const PostsRouter = require("./posts/postRouter.js");
 const UserRouter = require("./users/userRouter.js");
 
 const server = express();
 server.use(express.json());
 server.use("/api/posts", PostsRouter)
-server.user("/api/users", UserRouter)
+server.use("/api/users", UserRouter)
 server.use(logger);
 
 
